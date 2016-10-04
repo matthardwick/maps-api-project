@@ -1,6 +1,6 @@
 # Google Maps and Wikipedia API project
 
-## To view the page, [click here]() or clone/download the repository and open index.html
+## To view the page, [click here](http://mattdhardwick.com/maps-api-project/) or clone/download the repository and open index.html
 
 ### Resources I used to complete the project, thank you to the countless number of people that helped or gave me inspiration:
 
