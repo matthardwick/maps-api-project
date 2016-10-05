@@ -2,7 +2,6 @@
   // view model
   function ViewModel() {
     var that = this;
-    var $APIError = $('#APIError');
     var lat;
     var lng;
     var map;
@@ -21,6 +20,7 @@
     that.dataList = ko.observableArray([]);
     that.filterList = ko.observableArray(that.dataList());
     that.formattedAddress = ko.observable('');
+    that.ajaxError = ko.observable(false);
 
     /**
      * Get best nearby location venues data from foursquare API,
@@ -67,7 +67,7 @@
                 map.fitBounds(mapBounds);
             }
         }).error(function (e) {
-          $APIError.text('Data could not be loaded');
+          that.ajaxError(!that.ajaxError());
       });
     }
 

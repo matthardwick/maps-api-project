@@ -33,6 +33,7 @@
         <button class="btn btn-primary button-control">Search</button>
         <!-- toggle foursquare list show/hide-->
         <button class="btn btn-info button-control" onclick="toggle('venue-list')">Hide/Show List</button>
+        <span id="APIError" data-bind="visible: ajaxError">Foursquare Data Could not be Loaded</span>
       </div>
     </nav>
 
@@ -68,13 +69,14 @@
                   </div>
                 </div>
               </div>
-              <span id="APIError"></span>
+              
             </div>
           </div>
         <div>
           
         </div>
       </aside>
+      
     </div>
     
     <main id="map"></main>
