@@ -1,6 +1,6 @@
 ﻿body {
     margin: 0px;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
 }
 
 #map {
@@ -41,7 +41,7 @@
 .details {
     padding-left: 15px;
     padding-right: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-size: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -55,7 +55,7 @@
 }
 
 .location {
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: bold;
     text-align: center;
     border-top: solid 1px;

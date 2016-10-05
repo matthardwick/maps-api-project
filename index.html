@@ -22,22 +22,22 @@
 <body>
   <!-- search area and foursquare list -->
   <div class="search-list">
-    <div class="navbar-form navbar-left">
+    <nav class="navbar-form navbar-left">
       <div class="form-group">
         <!-- location -->
         <input data-bind="value: location" class="form-control" placeholder="City, State, or Zip">
         <!-- search keyword -->
         <input data-bind="value: keyword" class="form-control" placeholder="Food, bars, hotels, etc.">
         <!-- filter results -->
-        <input data-bind="value: filterResults" class="form-control" placeholder="Filter Results">
+        <input data-bind="textInput: filterResults" class="form-control" placeholder="Filter Results">
         <button class="btn btn-primary button-control">Search</button>
         <!-- toggle foursquare list show/hide-->
         <button class="btn btn-info button-control" onclick="toggle('venue-list')">Hide/Show List</button>
       </div>
-    </div>
+    </nav>
 
     <!-- foursquare results list-->
-    <div class="container-fluid venue-list">
+    <aside class="container-fluid venue-list">
       <!-- list header -->
       <div class="row location">
         <h2 data-bind="text: location"></h2>
@@ -68,19 +68,21 @@
                   </div>
                 </div>
               </div>
+              <span id="APIError"></span>
+              <span id="PlacesError"></span>
             </div>
           </div>
         <div>
           
         </div>
-      </div>
+      </aside>
     </div>
-
-    <div id="map"></div>
+    
+    <main id="map"></main>
     <script src="js/foursquare.js"></script>
     <script src="js/app.js"></script>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
-    <script async onerror="googleError()" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8PjNsy43WX8-_quhbfmpvbFJ3sZGtqOw&libraries=places&callback=initViewModel"></script>
+    <script async onerror="mapsError()" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8PjNsy43WX8-_quhbfmpvbFJ3sZGtqOw&libraries=places&callback=initViewModel"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
